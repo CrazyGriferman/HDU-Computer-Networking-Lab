@@ -159,3 +159,13 @@ router2 serial2/0 -> 192.168.4.2
 > 图 10 router1 fa0/0 接口的 OSPF 协议配置信息
 
 我们可以看到 DR（192.168.3.1）和 BDR（192.168.4.1）的信息，同时也可以看到 Hello 包的一些配置，例如发送 Hello 数据包的时间间隔为 10 秒，如果 40 秒内没有收到 Hello 包的话就会断开邻居关系。并且，三个路由器都在 area 0 中，如果是不同的区域的话是不能作为邻居的。
+
+# 总结方法
+
+如果想要再细致了解下 OSPF，可以通过 show ip ospf interface 指令查看对应串口的信息，例如再 router1 中输入 show ip ospf interface fastEthernet 0/0，得到以下信息：
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/0f34df0523e04c8790c131370c69caaf.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5aSp5LiLNTkxMg==,size_20,color_FFFFFF,t_70,g_se,x_16)
+
+> 图 10 router1 fa0/0 接口的 OSPF 协议配置信息
+
+我们可以看到 DR（192.168.3.1）和 BDR（192.168.4.1）的信息，同时也可以看到 Hello 包的一些配置，例如发送 Hello 数据包的时间间隔为 10 秒，如果 40 秒内没有收到 Hello 包的话就会断开邻居关系。并且，三个路由器都在 area 0 中，如果是不同的区域的话是不能作为邻居的。
