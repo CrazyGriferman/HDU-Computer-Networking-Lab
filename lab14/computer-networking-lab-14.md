@@ -130,7 +130,7 @@ server IP 地址 -> 200.1.1.10
 > no ip nat inside source static 192.168.0.20 201.1.1.3
 
 ## 配置 IP 访问控制列表
-
+ 
 接下来，我们就要指定哪些 IP 地址可以被访问、转换，为此我们需要在 Router1 上配置 ACL：
 
 > access-list 1 permit 192.168.0.0 0.0.0.255
